@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <h1 class="display-3">CLASS-E-FIED</h1>
+    <p class="secret-text">Don't keep your knowledge to yourself, share them anonymously!</p>
+
+    <form action="/submit" method="POST">
+
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="post" placeholder="What's your thoughts?">
+      </div>
+      <button type="submit" class="submit btn btn-dark">Submit</button>
+    </form>
+
+
+  </div>
+</div>
+<a class="back btn btn-light btn-lg" href="/logout" role="button">Back</a>
+<%- include('partials/footer') %>

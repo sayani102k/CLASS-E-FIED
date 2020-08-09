@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-3">Thoughts!</h1>
+
+    <%usersWithPosts.forEach(function(user){%>
+      <div class="containerpost">
+
+      <p><%=user.post.substring(0,100)+"...."%>
+      <a href="/posts/<%=user._id%>">Read More</a>
+      </p>
+
+    </div>
+    <%});%>
+
+    <a class="tabs btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+    <a class="submit tabs btn btn-dark btn-lg" href="/submit" role="button">Submit your thoughts!</a>
+  </div>
+</div>
+<a class="back btn btn-light btn-lg" href="/logout" role="button">Back</a>
+<%- include('partials/footer') %>
